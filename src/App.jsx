@@ -6,7 +6,9 @@ function App() {
   let [name, setname] = useState();
 
   async function fetchingdata() {
-    let res = await axios.get("http://localhost:2000/getdata");
+    let res = await axios.get(
+      "https://demo-backend-one-blush.vercel.app/getdata"
+    );
     setname(res.data);
     console.log(res);
   }
